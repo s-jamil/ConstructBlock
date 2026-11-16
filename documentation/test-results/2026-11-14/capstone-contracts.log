@@ -1,0 +1,62 @@
+
+> constructblock-contracts@0.1.0 test
+> hardhat test
+
+No contracts to compile
+
+Running Solidity tests
+
+
+Running Mocha tests
+(node:49319) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+  Government role administration
+    ✔ starts with the supplied government as administrator
+    ✔ lets government approve and revoke bidders
+    ✔ prevents a bidder granting itself officer rights
+    ✔ prevents outsiders approving bidders
+    ✔ rejects zero addresses and unknown roles
+    ✔ prevents abandoning government administration
+    ✔ transfers administration through delayed acceptance
+
+  Publication and confidential bid evidence
+    ✔ publishes an open tender with an assigned commission
+    ✔ rejects unknown tender IDs
+    ✔ blocks publication by a bidder
+    ✔ requires a future deadline and required key fingerprints
+    ✔ preserves old commitments when replacing a bid
+    ✔ rejects unapproved and revoked bidders
+    ✔ requires complete required parts and rejects unexpected technical evidence
+    ✔ rejects replayed or skipped versions
+    ✔ withdraws only the caller's own bid and allows resubmission
+    ✔ rejects submission exactly at the deadline
+    ✔ rejects withdrawal at the deadline without waiting for explicit closure
+    ✔ prevents early closure and unassigned commission actions
+
+  Government opening and evaluation
+    ✔ authorizes initial opening immediately on the assigned commission request
+    ✔ rejects opening requests before deadline and before closure
+    ✔ blocks government, service, bidders, outsiders and unassigned commissions from opening
+    ✔ rejects duplicate requests and opening with a revoked commission role
+    ✔ removes the legacy custodian role and approval function
+    ✔ rejects an unauthorized opening service
+    ✔ rejects superseded versions and duplicate outcomes
+    ✔ rejects withdrawn bids while retaining their evidence
+    ✔ requires a human decision on failed initial verification and blocks admission
+    ✔ does not open financial parts while initial reviews are incomplete
+    ✔ completes a tender without a separate technical offer
+    ✔ completes a tender with a separate technical offer
+    ✔ does not skip the configured technical stage
+    ✔ excludes a failed technical offer from financial eligibility
+    ✔ separates commission selection from final government approval
+    ✔ restricts pausing to government and preserves emergency cancellation
+    ✔ records an empty closed tender as unsuccessful
+
+
+  36 passing (598ms)
+
+
+36 passing (36 mocha)
+

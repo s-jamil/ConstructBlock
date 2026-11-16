@@ -1,0 +1,18 @@
+
+> constructblock-contracts@0.1.0 test:governance
+> hardhat run scripts/governance-smoke.mjs
+
+
+PASS Unrelated wallets, unassigned commissions and wrong networks are rejected
+PASS Legacy opening deployments are rejected before actor actions
+PASS Actor dashboard includes current versions, withdrawn bids and Pending outcomes
+PASS Changed account, revoked role, paused platform and cancelled review never broadcast
+PASS Commission wallet closes tender and receives an exact StateChanged confirmation
+PASS Unassigned wallets cannot request a stage; commission authorizes initial opening directly
+PASS Duplicate opening requests are blocked
+PASS Incomplete initial reviews cannot be bypassed for later stages
+PASS Pending verification and failed verification cannot be admitted
+PASS Commission records separate admission and exclusion decisions and cannot overwrite them
+PASS Technical stage requires its own commission request and verification before a human decision
+PASS Financial opening follows completed technical decisions and commission authorization
+PASS Optional technical stage is omitted and financial opening follows initial admission

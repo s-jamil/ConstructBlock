@@ -1,0 +1,14 @@
+{
+  "name": "constructblock-orbitdb-runtime",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24.0.0 <25" },
+  "dependencies": {
+    "@orbitdb/core": "4.0.0",
+    "helia": "6.0.22",
+    "blockstore-level": "3.0.2",
+    "@libp2p/gossipsub": "15.0.16",
+    "@libp2p/identify": "4.0.5"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "project": "constructBlock",
+  "generatedAt": "2026-11-14T16:55:25.208Z",
+  "result": "passed",
+  "checks": [
+    "Wrong network and unapproved bidder rejected before encryption or signing",
+    "Browser encrypts required parts, authenticates upload and receives a non-acceptance storage receipt",
+    "Upload retry is idempotent and survives storage service restart",
+    "Wrong stored content ID and invalidated session prevent signing",
+    "Bidder signs one transaction and matching BidSubmitted evidence is confirmed",
+    "Original upload cannot be resubmitted as the next version",
+    "Stored ciphertext can be independently decrypted and matched to the on-chain commitment",
+    "Tender without technical part submits a zero technical evidence tuple",
+    "Role revocation prevents retrieval and another upload"
+  ],
+  "execution": "Isolated real Hardhat EVM, disposable wallet adapter, browser WebCrypto functions, injected HTTP and temporary persistent disk storage",
+  "limitations": [
+    "No real extension approval dialog or OS TCP listener",
+    "Private keys exist only in this single-process test; not production custody",
+    "Does not implement an opening-service decryption endpoint"
+  ]
+}

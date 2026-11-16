@@ -1,0 +1,26 @@
+{
+  "project": "constructBlock",
+  "generatedAt": "2026-11-14T16:55:31.335Z",
+  "result": "passed",
+  "checks": [
+    "Final approver can load the actor view; unrelated and wrong-network wallets cannot",
+    "Selection is blocked before the financial stage",
+    "All eligible financial outcomes must be recorded before selection",
+    "Failed financial evidence, unapproved review versions and unassigned actor selection are rejected",
+    "Commission selects a verified bidder and selection remains provisional",
+    "Commission cannot self-approve even when granted APPROVAL_ROLE",
+    "Final approval is bound to the reviewed selection and current role",
+    "Commission may record a provisional extract without approving or publishing an award",
+    "Separate approver records approval and cannot overwrite it",
+    "Public extract replacement detects stale reviews and requires the commission",
+    "Separate rejection path reaches Rejected and permits its extract digest",
+    "Public API reflects approved and rejected states without leaking selected bidder fields",
+    "Cancellation after selection invalidates an approver review"
+  ],
+  "execution": "Actual actor wallet-client functions and public API on an isolated real Hardhat EVM with disposable wallet adapters",
+  "limitations": [
+    "No real extension prompts or UI clicks",
+    "Synthetic verification attestations; decryption has its own integration suite",
+    "An extract digest is not proof of website publication"
+  ]
+}

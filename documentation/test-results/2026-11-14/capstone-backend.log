@@ -1,0 +1,19 @@
+
+> constructblock-contracts@0.1.0 test:backend
+> hardhat run scripts/backend-smoke.mjs
+
+
+PASS  Health endpoint is available
+PASS  Status checks real EVM deployment and linked registry
+PASS  Legacy or incompatible opening policies fail readiness
+PASS  Tender endpoint decodes real Solidity tuple and filters restricted fields
+PASS  Unknown tender maps to 404
+PASS  Approved and unapproved wallets reflect real registry roles
+PASS  Role revocation is visible on the next read
+PASS  Wrong expected chain is rejected
+PASS  An address without deployed code is rejected
+PASS  A registry from a different deployment is rejected
+PASS  RPC failures are sanitized and health stays available
+PASS  An unresponsive provider is bounded by the configured timeout
+
+12 backend/EVM integration checks passed.

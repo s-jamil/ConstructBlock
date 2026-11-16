@@ -1,0 +1,30 @@
+{
+  "project": "constructBlock",
+  "generatedAt": "2026-11-13T17:28:02.257Z",
+  "result": "passed",
+  "storageMode": "orbitdb-socket",
+  "checks": [
+    "Before deadline or commission authorization the viewer cannot load private keys",
+    "Government, bidder, unassigned actor, final approver and unrelated wallets have no implicit document access",
+    "Wrong deployment, unsigned requests and substituted signed targets are denied",
+    "Closure alone cannot enable document viewing",
+    "Commission authorization does not release a Pending document",
+    "Verified initial contents are returned only to the commission with a persisted audit and nonce replay prevention",
+    "Failed parts, stale versions and unopened financial offers remain restricted",
+    "The actual browser client signs, requests and validates a matching verified document",
+    "Paused platform and revoked commission role block later releases",
+    "Revocation during key loading is rechecked after decryption before release",
+    "Missing or corrupted stored ciphertext fails closed without changing verification outcomes",
+    "Technical and financial documents require their own verified opening stages",
+    "Verified documents remain accessible through selection and approval; cancellation stops access",
+    "The public API never exposes a plaintext viewing endpoint or document content",
+    "OrbitDB contains exact encrypted packages and the tender reaches Approved"
+  ],
+  "execution": "Actual browser document client, isolated real Hardhat EVM, signed HTTP handler, genuine RSA/AES documents and persisted audit",
+  "limitations": [
+    "No real browser extension prompts or live TCP listener",
+    "Local file custody; Vault protocol adapter has separate simulated-transport tests",
+    "Audits record release authorization, not proof the recipient read the file",
+    "Authorization cannot revoke previously released copies"
+  ]
+}

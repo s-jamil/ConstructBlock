@@ -1,0 +1,18 @@
+
+> constructblock-contracts@0.1.0 test:opening
+> hardhat run scripts/opening-smoke.mjs
+
+
+PASS Unsigned, forged and expired service requests are rejected
+PASS No private key is read before deadline or commission authorization
+PASS Closure alone cannot release a part; only the assigned commission can authorize opening
+PASS An authorized endpoint returns only the approved part, not unopened technical or financial material
+PASS Wrong service, wrong deployment, stale version and paused platform are rejected
+PASS Service revocation between retrieval and key access prevents key loading
+PASS Missing objects and wrong operator keys leave on-chain outcomes pending
+PASS Initial stage decrypts and verifies commitment, records a matching receipt and prevents reprocessing
+PASS On-chain commitment mismatch records Failed with a non-sensitive attestation digest
+PASS On-chain authenticated ciphertext with an invalid tag records Failed
+PASS Technical stage is authorized separately and records verified evidence
+PASS Financial stage requires technical acceptance and commission authorization
+PASS Service revocation blocks further opening retrieval

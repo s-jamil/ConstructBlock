@@ -1,0 +1,39 @@
+{
+  "name": "constructblock-contracts",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0 <25"
+  },
+  "scripts": {
+    "build": "hardhat build",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.ts --network localhost",
+    "walkthrough": "hardhat run scripts/walkthrough.ts",
+    "walkthrough:local": "hardhat run scripts/walkthrough.ts --network localhost",
+    "test:backend": "hardhat run scripts/backend-smoke.mjs",
+    "test:publication": "hardhat run scripts/publication-smoke.mjs",
+    "test:storage": "hardhat run scripts/bid-storage-smoke.mjs",
+    "test:opening": "hardhat run scripts/opening-smoke.mjs",
+    "test:governance": "hardhat run scripts/governance-smoke.mjs",
+    "test:award": "hardhat run scripts/award-smoke.mjs",
+    "test:documents": "hardhat run scripts/document-smoke.mjs",
+    "test:orbitdb:workflow": "CONSTRUCTBLOCK_TEST_STORAGE=orbitdb-direct hardhat run scripts/document-smoke.mjs",
+    "test:orbitdb:socket-workflow": "CONSTRUCTBLOCK_TEST_STORAGE=orbitdb-socket hardhat run scripts/document-smoke.mjs"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "5.4.0"
+  },
+  "devDependencies": {
+    "hardhat": "^3.0.0",
+    "@nomicfoundation/hardhat-ethers": "^4.0.0",
+    "@nomicfoundation/hardhat-mocha": "^3.0.0",
+    "ethers": "^6.14.0",
+    "mocha": "^11.0.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^24.0.0",
+    "typescript": "~5.8.0"
+  }
+}

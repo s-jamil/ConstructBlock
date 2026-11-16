@@ -1,0 +1,38 @@
+{
+  "name": "constructblock-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0 <25"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node --env-file-if-exists=.env dist/server.js",
+    "test": "node --test test/*.test.ts",
+    "test:integration": "npm run build && npm --prefix ../contracts run test:backend",
+    "sync:contracts": "node scripts/sync-contracts.mjs",
+    "configure:local": "node scripts/configure-local.mjs",
+    "keys:generate": "node scripts/generate-opening-keys.mjs",
+    "opening:local": "npm run build && node --env-file-if-exists=.env scripts/opening-local.mjs",
+    "documents:dev": "node --env-file-if-exists=.env --env-file-if-exists=.env.documents --watch src/document-server.ts",
+    "documents:start": "node --env-file-if-exists=.env --env-file-if-exists=.env.documents dist/document-server.js",
+    "keys:vault:export": "npm run build && node --env-file-if-exists=.env --env-file-if-exists=.env.documents scripts/export-vault-public-keys.mjs",
+    "opening:verify": "npm run build && node --env-file-if-exists=.env --env-file-if-exists=.env.opening scripts/opening-verify.mjs",
+    "orbitdb:install": "npm --prefix orbitdb-runtime install",
+    "orbitdb:start": "npm run build && node --env-file-if-exists=.env scripts/orbitdb-local.mjs start",
+    "orbitdb:status": "node --env-file-if-exists=.env scripts/orbitdb-local.mjs status",
+    "orbitdb:import": "npm run build && node --env-file-if-exists=.env scripts/orbitdb-import.mjs",
+    "test:orbitdb:live": "npm run build && node --test test/orbitdb-live.mjs"
+  },
+  "dependencies": {
+    "express": "5.2.1",
+    "ethers": "6.17.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^24.0.0",
+    "typescript": "~5.8.0"
+  }
+}

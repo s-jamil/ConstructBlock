@@ -1,0 +1,26 @@
+{
+  "project": "constructBlock",
+  "generatedAt": "2026-11-14T16:55:29.457Z",
+  "result": "passed",
+  "checks": [
+    "Unrelated wallets, unassigned commissions and wrong networks are rejected",
+    "Legacy opening deployments are rejected before actor actions",
+    "Actor dashboard includes current versions, withdrawn bids and Pending outcomes",
+    "Changed account, revoked role, paused platform and cancelled review never broadcast",
+    "Commission wallet closes tender and receives an exact StateChanged confirmation",
+    "Unassigned wallets cannot request a stage; commission authorizes initial opening directly",
+    "Duplicate opening requests are blocked",
+    "Incomplete initial reviews cannot be bypassed for later stages",
+    "Pending verification and failed verification cannot be admitted",
+    "Commission records separate admission and exclusion decisions and cannot overwrite them",
+    "Technical stage requires its own commission request and verification before a human decision",
+    "Financial opening follows completed technical decisions and commission authorization",
+    "Optional technical stage is omitted and financial opening follows initial admission"
+  ],
+  "execution": "Actual frontend actor-client functions with a disposable EIP-1193 wallet adapter on an isolated Hardhat EVM",
+  "limitations": [
+    "No real browser extension approval dialog or UI click automation",
+    "Verification outcomes are supplied by the test opening-service actor; the separate opening integration tests decryption",
+    "No document viewing, selection or final-approval interface"
+  ]
+}

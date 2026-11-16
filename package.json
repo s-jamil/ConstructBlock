@@ -1,0 +1,29 @@
+{
+  "name": "constructblock",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0 <25"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "install:apps": "npm --prefix backend install && npm --prefix frontend install",
+    "build": "npm --prefix backend run build && npm --prefix frontend run build",
+    "test": "npm --prefix backend test && npm --prefix frontend test",
+    "test:integration": "npm --prefix backend run test:integration",
+    "test:publication": "npm --prefix backend run build && npm --prefix contracts run test:publication",
+    "test:storage": "npm --prefix backend run build && npm --prefix contracts run test:storage",
+    "test:opening": "npm --prefix backend run build && npm --prefix contracts run test:opening",
+    "test:governance": "npm --prefix contracts run test:governance",
+    "test:award": "npm --prefix backend run build && npm --prefix contracts run test:award",
+    "test:documents": "npm --prefix backend run build && npm --prefix contracts run test:documents",
+    "orbitdb:install": "npm --prefix backend run orbitdb:install",
+    "orbitdb:start": "npm --prefix backend run orbitdb:start",
+    "orbitdb:status": "npm --prefix backend run orbitdb:status",
+    "orbitdb:import": "npm --prefix backend run orbitdb:import",
+    "test:orbitdb:live": "npm --prefix backend run test:orbitdb:live",
+    "test:orbitdb:workflow": "npm --prefix backend run build && npm --prefix contracts run test:orbitdb:workflow",
+    "test:orbitdb:socket-workflow": "npm --prefix backend run build && npm --prefix contracts run test:orbitdb:socket-workflow"
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "project": "constructBlock",
+  "generatedAt": "2026-10-23T18:10:38.468Z",
+  "network": "default",
+  "chainId": 31337,
+  "tenderId": "1",
+  "finalState": "Approved",
+  "contracts": {
+    "RoleRegistry": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    "ProcurementWorkflow": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
+  },
+  "selectedBidder": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+  "checks": {
+    "twoCustodiansPerPart": true,
+    "sha256EvidenceMatched": true,
+    "authenticatedDecryption": true,
+    "saltedCommitmentsMatched": true,
+    "alteredCiphertextDetected": true,
+    "selectionSeparateFromApproval": true
+  },
+  "limitations": [
+    "Synthetic single-bidder run, not a procurement outcome study",
+    "Custody, client and service simulated in one process; no production isolation",
+    "Public extract recorded as a digest, not actually published to a website",
+    "Default chain is ephemeral; local node history persists only while that node retains state"
+  ],
+  "transactions": [
+    {
+      "action": "Government assigns officer",
+      "hash": "0x793cada89c68d554edc1739242028145414ba8ac64e575e31b6ac7b5a62f01da",
+      "block": 3
+    },
+    {
+      "action": "Government assigns commission",
+      "hash": "0x1b6759d9d8b562cc73426c6c6fd398eb31fc967058124c28e261e4ec0b204c59",
+      "block": 4
+    },
+    {
+      "action": "Government assigns custodian 1",
+      "hash": "0x758994660fec9678928fb69a6e7b706942470211d18316bd690268b9a57dbd48",
+      "block": 5
+    },
+    {
+      "action": "Government assigns custodian 2",
+      "hash": "0x01d7dce69bbe4d2a74a7cce9cdff227a31ef0a3fda5fe9f928d20db6b05c08d0",
+      "block": 6
+    },
+    {
+      "action": "Government assigns opening service",
+      "hash": "0x9c73ca4a12c7a4d2878464702b651dc5bd4957c35b9c71bcda24f1db3f14e7f6",
+      "block": 7
+    },
+    {
+      "action": "Government assigns approval authority",
+      "hash": "0x73103ecfca47673f62d4dbe535fbddef613f1226ab0b6180e6cff2d47c9e6363",
+      "block": 8
+    },
+    {
+      "action": "Government approves synthetic bidder",
+      "hash": "0xbd34e6496979013d94332fc130bc3e148356e2681ad9abb83d2caad0becffd0f",
+      "block": 9
+    },
+    {
+      "action": "Officer publishes tender with three part keys",
+      "hash": "0xaae4637aa8b259817e6dc74b7425a3fc4dd832fdf00f4e1ad78c54dbb9a39869",
+      "block": 10
+    },
+    {
+      "action": "Bidder submits encrypted-part commitments and hashes",
+      "hash": "0x0bfe9bb3dc1ff6387139de9d063fbb29c8df48c46138e7738b7b5eb2aecdd4bb",
+      "block": 11
+    },
+    {
+      "action": "Commission closes submissions at deadline",
+      "hash": "0x24af8433cdf81878e63ba1737f0e72f84405d686f8a38506889d085e730bee10",
+      "block": 12
+    },
+    {
+      "action": "Commission requests initial opening",
+      "hash": "0x42a452e535e06a26cb824c4d77d8974eb35a50dca30bf404cd7519c83e0a4243",
+      "block": 13
+    },
+    {
+      "action": "Custodian 1 approves initial",
+      "hash": "0xedbb2824c4fc021366c2616754cb4f37e51bcd78d9409087712762980e8aca6e",
+      "block": 14
+    },
+    {
+      "action": "Custodian 2 approves initial",
+      "hash": "0x7fdfd934d7eb255e5001829800fbab7cf6758da856e3eaf91e6305fdef828ce2",
+      "block": 15
+    },
+    {
+      "action": "Service records verified initial outcome",
+      "hash": "0x57307d398e8429050189bcece0f1b11e4f6f51b623f61d3a4c1ab22534046e4b",
+      "block": 16
+    },
+    {
+      "action": "Commission admits verified bidder",
+      "hash": "0xb8ba5a1d73dcf947874e48d30a28fb144796a53d298fe568daf52f697a4791db",
+      "block": 17
+    },
+    {
+      "action": "Commission requests technical opening",
+      "hash": "0x1ae411f6d22e23cfb7f2b1dc9ad4a46d2139108d3988ae2952b7e171ffeaf5af",
+      "block": 18
+    },
+    {
+      "action": "Custodian 1 approves technical",
+      "hash": "0x0bd8cd796542a44be85dffd0c81a2cb821f586e9b2328ee316f807d7149b0def",
+      "block": 19
+    },
+    {
+      "action": "Custodian 2 approves technical",
+      "hash": "0x5c583c1992d2276d642e5e24dcc2b8b63421797962033cc08f49d2924c81f272",
+      "block": 20
+    },
+    {
+      "action": "Service records verified technical outcome",
+      "hash": "0x245aadb315d466c5c435096f7cf5296d73791815d6a4cee68aeb121e9b00af43",
+      "block": 21
+    },
+    {
+      "action": "Commission accepts technical offer",
+      "hash": "0xcdeecf20624f0ce35e8a555091dfd112e97e57a66e8adce6817d9a13894e2429",
+      "block": 22
+    },
+    {
+      "action": "Commission requests financial opening",
+      "hash": "0x086fac6760b144c6d70dd33906ab0dc5a249c806462590efb8b2ed736ab5d969",
+      "block": 23
+    },
+    {
+      "action": "Custodian 1 approves financial",
+      "hash": "0x92531cd3231fa7f988376f4602b19b5ac406498a22dba5eecbe812553ed7e10c",
+      "block": 24
+    },
+    {
+      "action": "Custodian 2 approves financial",
+      "hash": "0x5a7f8fe7b78a14d6f79839165ba3184482189064c50c1bba8fc5681f38796970",
+      "block": 25
+    },
+    {
+      "action": "Service records verified financial outcome",
+      "hash": "0xe97d33b86b08829790ffbbc8fa13453334bd52076ccb18ebf9925efb12f33a05",
+      "block": 26
+    },
+    {
+      "action": "Commission records selection",
+      "hash": "0x43c3a4b56abe358c0fe08760f51fedd79b5fa77c077d9cca564670a30a81c883",
+      "block": 27
+    },
+    {
+      "action": "Commission records approved public extract digest",
+      "hash": "0x53eee13fd2c0aff85ab5f48326e6170fc4738e6c47fafca19694ebae399a0079",
+      "block": 28
+    },
+    {
+      "action": "Separate authority records final approval",
+      "hash": "0x5b6ab37dc6711652f77795eedb7f32f92245de96a134cfb47785faea226b4a62",
+      "block": 29
+    }
+  ]
+}

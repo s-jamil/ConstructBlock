@@ -1,0 +1,29 @@
+{
+  "project": "constructBlock",
+  "generatedAt": "2026-11-14T16:55:23.148Z",
+  "result": "passed",
+  "checks": [
+    "Health endpoint is available",
+    "Status checks real EVM deployment and linked registry",
+    "Legacy or incompatible opening policies fail readiness",
+    "Tender endpoint decodes real Solidity tuple and filters restricted fields",
+    "Unknown tender maps to 404",
+    "Approved and unapproved wallets reflect real registry roles",
+    "Role revocation is visible on the next read",
+    "Wrong expected chain is rejected",
+    "An address without deployed code is rejected",
+    "A registry from a different deployment is rejected",
+    "RPC failures are sanitized and health stays available",
+    "An unresponsive provider is bounded by the configured timeout"
+  ],
+  "execution": "Real isolated Hardhat EVM; HTTP handler injection without a listening TCP socket",
+  "chainId": "31337",
+  "contracts": {
+    "registry": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    "workflow": "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9"
+  },
+  "limitations": [
+    "Does not test an OS TCP listener or the user's existing localhost node",
+    "No authentication, transaction signing or production deployment"
+  ]
+}

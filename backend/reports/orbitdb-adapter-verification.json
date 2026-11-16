@@ -1,0 +1,74 @@
+{
+  "project": "constructBlock",
+  "milestone": "OrbitDB adapter and service wiring",
+  "generatedAt": "2026-11-13T17:25:20.842739+00:00",
+  "status": "actual-engine-workflow-passed-socket-deployment-unverified",
+  "applicationUnitTests": {
+    "backend": 72,
+    "frontend": 79,
+    "orbitdbAdapterSubset": 12,
+    "result": "passed"
+  },
+  "builds": {
+    "backend": "passed",
+    "frontend": "passed"
+  },
+  "filesystemEvmRegressions": {
+    "storage": 9,
+    "opening": 13,
+    "restrictedDocuments": 14,
+    "result": "passed",
+    "restrictedDocumentsLatestRun": "14 passed after test harness changes"
+  },
+  "runtimeInstallation": {
+    "result": "passed",
+    "command": "npm run orbitdb:install",
+    "lockfile": "backend/orbitdb-runtime/package-lock.json",
+    "node": "24.2.0",
+    "warnings": "Transitive React Native/Metro packages require Node >=24.3 within Node 24"
+  },
+  "actualOrbitdbTest": {
+    "result": "failed-at-socket",
+    "command": "npm run test:orbitdb:live",
+    "failure": "listen EPERM",
+    "completedBeforeFailure": "Cross-process maximum-size record persistence, stable address and content ID, zero peers"
+  },
+  "socketTransport": {
+    "result": "not-established",
+    "observedRestriction": "listen EPERM on a temporary Unix socket"
+  },
+  "limitations": [
+    "Earlier application unit tests and engine persistence results retained from Entries 008 and 009",
+    "Actual-engine tender workflow passed; deployed socket transport remains unverified",
+    "OrbitDB configured; successful live import and service restart not established",
+    "Default database previously observed LEVEL_LOCKED; no locks deleted or processes killed",
+    "No peer synchronization or replication workflow configured"
+  ],
+  "priorVerificationAt": "2026-11-13T16:58:59.012176+00:00",
+  "standaloneEngineVerification": {
+    "result": "passed",
+    "tests": 1,
+    "scope": "Three maximum-size encrypted parts; separate write/read processes; stable database address and content ID; zero connected peers; independent decryption",
+    "runner": "Temporary standalone variant of live suite without socket stage"
+  },
+  "ownerStart": {
+    "result": "blocked",
+    "command": "npm run orbitdb:start",
+    "failure": "listen EPERM at default storage socket",
+    "databaseInitialized": true
+  },
+  "actualEngineWorkflow": {
+    "result": "passed",
+    "checks": 15,
+    "command": "npm run test:orbitdb:workflow",
+    "evidence": "contracts/reports/orbitdb-direct-workflow.json",
+    "transport": "Direct actual OrbitDB adapter and injected HTTP; real isolated Hardhat EVM",
+    "finalTenderState": "Approved"
+  },
+  "socketWorkflow": {
+    "result": "blocked",
+    "command": "npm run test:orbitdb:socket-workflow",
+    "failure": "listen EPERM before workflow execution"
+  },
+  "providerConfiguration": "STORAGE_PROVIDER=orbitdb"
+}

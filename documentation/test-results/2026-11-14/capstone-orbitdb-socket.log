@@ -1,0 +1,23 @@
+
+> constructblock-contracts@0.1.0 test:orbitdb:socket-workflow
+> CONSTRUCTBLOCK_TEST_STORAGE=orbitdb-socket hardhat run scripts/document-smoke.mjs
+
+
+An unexpected error occurred:
+
+Error: listen EPERM: operation not permitted /tmp/cb-workflow-zpnAwe/storage.sock
+    at Server.setupListenHandle [as _listen2] (node:net:1918:21)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2119:5)
+    at file:///Users/macbookpro/Desktop/Capstone/Implementation/constructBlock/backend/dist/orbitdb-server.js:78:83
+    at new Promise (<anonymous>)
+    at serveOrbitStorage (file:///Users/macbookpro/Desktop/Capstone/Implementation/constructBlock/backend/dist/orbitdb-server.js:78:11)
+    at async file:///Users/macbookpro/Desktop/Capstone/Implementation/constructBlock/contracts/scripts/document-smoke.mjs:50:10 {
+  code: 'EPERM',
+  errno: -1,
+  syscall: 'listen',
+  address: '/tmp/cb-workflow-zpnAwe/storage.sock',
+  port: -1
+}
+
+If you think this is a bug in Hardhat, please report it here: https://hardhat.org/report-bug

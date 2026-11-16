@@ -1,0 +1,19 @@
+
+> constructblock-contracts@0.1.0 test:documents
+> hardhat run scripts/document-smoke.mjs
+
+
+PASS Before deadline or commission authorization the viewer cannot load private keys
+PASS Government, bidder, unassigned actor, final approver and unrelated wallets have no implicit document access
+PASS Wrong deployment, unsigned requests and substituted signed targets are denied
+PASS Closure alone cannot enable document viewing
+PASS Commission authorization does not release a Pending document
+PASS Verified initial contents are returned only to the commission with a persisted audit and nonce replay prevention
+PASS Failed parts, stale versions and unopened financial offers remain restricted
+PASS The actual browser client signs, requests and validates a matching verified document
+PASS Paused platform and revoked commission role block later releases
+PASS Revocation during key loading is rechecked after decryption before release
+PASS Missing or corrupted stored ciphertext fails closed without changing verification outcomes
+PASS Technical and financial documents require their own verified opening stages
+PASS Verified documents remain accessible through selection and approval; cancellation stops access
+PASS The public API never exposes a plaintext viewing endpoint or document content

@@ -1,0 +1,10 @@
+
+> constructblock-contracts@0.1.0 test:publication
+> hardhat run scripts/publication-smoke.mjs
+
+
+PASS wrong network and unapproved officer rejected
+PASS invalid commission, deadline and changed wallet never send a transaction
+PASS wallet-signed publication and matching receipt confirmation
+PASS newly published tender is available through the public API
+PASS role revocation after connection prevents publication

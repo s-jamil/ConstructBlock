@@ -1,0 +1,14 @@
+
+> constructblock-contracts@0.1.0 test:storage
+> hardhat run scripts/bid-storage-smoke.mjs
+
+
+PASS Wrong network and unapproved bidder rejected before encryption or signing
+PASS Browser encrypts required parts, authenticates upload and receives a non-acceptance storage receipt
+PASS Upload retry is idempotent and survives storage service restart
+PASS Wrong stored content ID and invalidated session prevent signing
+PASS Bidder signs one transaction and matching BidSubmitted evidence is confirmed
+PASS Original upload cannot be resubmitted as the next version
+PASS Stored ciphertext can be independently decrypted and matched to the on-chain commitment
+PASS Tender without technical part submits a zero technical evidence tuple
+PASS Role revocation prevents retrieval and another upload
